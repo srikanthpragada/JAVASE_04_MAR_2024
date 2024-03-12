@@ -5,12 +5,13 @@ public class Product {
 	private String name;
 	private double price;
 
-	// Methods
-	public void init(String n, double p) {
+	//constructor
+	public Product(String n, double p) {
 		name = n;
 		price = p;
 	}
 
+	// Methods
 	public void print() {
 		System.out.println(name);
 		System.out.println(price);
