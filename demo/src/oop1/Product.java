@@ -4,24 +4,25 @@ public class Product {
 	// Instance variables
 	private String name;
 	private double price;
+	private double taxRate = 0.12;
 
-	//constructor
-	public Product(String n, double p) {
-		name = n;
-		price = p;
+	// constructor
+	public Product(String name, double price) {
+		this.name = name;
+		this.price = price;
 	}
 
 	// Methods
 	public void print() {
-		System.out.println(name);
-		System.out.println(price);
+		System.out.println(this.name);
+		System.out.println(this.price);
 	}
-	
+
 	public double getSellingPrice() {
-		return  price + price * 0.12;
+		return this.price + this.price * this.taxRate;
 	}
-	
+
 	public double getPrice() {
-		return  price;
+		return this.price;
 	}
 }

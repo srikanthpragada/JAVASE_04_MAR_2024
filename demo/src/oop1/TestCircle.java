@@ -2,7 +2,6 @@ package oop1;
 
 class Circle {
 	private double radius;
-	
 	// Constructor 
 	public Circle(double r) {
 		radius = r;
@@ -11,7 +10,6 @@ class Circle {
 	public double getArea() {
 		return  Math.PI * radius * radius;
 	}
-	
 }
 
 public class TestCircle {
