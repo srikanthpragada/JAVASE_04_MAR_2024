@@ -1,11 +1,18 @@
 package oop1;
 
+
 public class Product {
 	// Instance variables
 	private String name;
 	private double price;
-	private double taxRate = 0.12;
+	
+	// Class variable or static variable
+	private static double taxRate = 0.12;
 
+	public static double getTaxRate() {
+		return  Product.taxRate; 
+    }
+	
 	// constructor
 	public Product(String name, double price) {
 		this.name = name;
@@ -19,7 +26,7 @@ public class Product {
 	}
 
 	public double getSellingPrice() {
-		return this.price + this.price * this.taxRate;
+		return this.price + this.price * Product.taxRate;
 	}
 
 	public double getPrice() {

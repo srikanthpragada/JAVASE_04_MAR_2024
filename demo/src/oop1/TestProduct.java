@@ -8,6 +8,9 @@ public class TestProduct {
 		 p = new Product("Logitech Mouse", 10000);
 		 p.print();
 		 
+		 System.out.println(Product.getTaxRate());
+		 
+		 
 		 Product p2 = new Product("iPhone 15 Pro",100000);
 		 p2.print();
 
