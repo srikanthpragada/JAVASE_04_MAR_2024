@@ -1,6 +1,6 @@
 package oop1;
 
-class Shape {
+abstract class Shape {
 	private int x, y;
 	public Shape(int x, int y) {
 		this.x = x;
@@ -10,6 +10,8 @@ class Shape {
 		System.out.println(this.x);
 		System.out.println(this.y);
 	}
+	
+	abstract public double area();
 }
 
 class Circle extends Shape {
@@ -23,22 +25,56 @@ class Circle extends Shape {
 	@Override
 	public void print() {
 		super.print();
-		System.out.println(this.radius);
+		System.out.println(this.radius); 
 	}
 	
+	@Override 
 	public double area() {
 		return Math.PI * this.radius * this.radius;
 	}
 }
 
-public class TestShape {
+class Square extends Shape {
+	private double side;
 
+	public Square(int x, int y, double side) {
+		super(x, y);
+		this.side = side;
+	}
+
+	@Override
+	public void print() {
+		super.print();
+		System.out.println(this.side); 
+	}
+	
+	@Override 
+	public double area() {
+		return this.side * this.side;
+	}
+}
+
+
+public class TestShape {
 	public static void main(String[] args) {
 		 Shape s = new Circle(10,20, 7.5); // Upcasting
-		 s.print();
+		 s.print();  // runtime polymorphism 
+		 System.out.println(s.area());  // runtime polymorphism 
 		 
-		 //Circle c = s;
 		 
+		 s = new Square(10,20,10);
+		 s.print(); // runtime polymorphism
+		 System.out.println(s.area());   // runtime polymorphism 
+		 
+		 
+//		 if(s instanceof Circle) {
+//		     Circle c = (Circle) s;    // Downcasting
+//		 }
+		 
+		  
+		 if (s instanceof Circle c) {
+			 
+		 }
 		  
 	}
 
