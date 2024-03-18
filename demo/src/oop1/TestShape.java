@@ -11,6 +11,10 @@ abstract class Shape {
 		System.out.println(this.y);
 	}
 	
+	final public int getX() {
+		return this.x;
+	}
+	
 	abstract public double area();
 }
 
