@@ -76,7 +76,8 @@ public class TestShape {
 //		 }
 		 
 		  
-		 if (s instanceof Circle c) {
+		 if (s instanceof Square sq) {
+			 
 			 
 		 }
 		  
