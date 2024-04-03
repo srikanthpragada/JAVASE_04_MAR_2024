@@ -8,7 +8,7 @@ class PrimeThread extends Thread {
 	public void run() {
 		for (int i = 2; i <= num / 2; i++) {
 			if (num % i == 0) {
-				System.out.printf("%s is not prime\n", num);
+				System.out.printf("%d is not prime\n", num);
 				return;
 			}
 		}
