@@ -19,7 +19,6 @@ public class UniqueWords {
 		 
 		 var uniqueWords = new TreeSet<String>(Arrays.asList(words));
 
-
 		 for(var w : uniqueWords)
 			 System.out.println(w);
 	}
